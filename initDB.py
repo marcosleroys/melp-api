@@ -9,6 +9,7 @@ db_url = os.getenv('DB_URL')
 
 # Function used to populate database from csv when service is initialized
 def initialize_database(db_url):
+    # Open connection to DB
     conn = psycopg2.connect(db_url)
 
     # Open a cursor to perform database operations
@@ -36,7 +37,7 @@ def initialize_database(db_url):
     # Open file with pandas
     df= pd.read_csv(filename)
 
-    # Iterate the df to execute an insert into database for each row
+    # Iterate the df to execute and insert into database for each row
     for i, row in df.iterrows():
 
         restaurant_id = row['id']
