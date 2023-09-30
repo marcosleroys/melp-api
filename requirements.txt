@@ -1,2 +1,6 @@
 Flask
 Gunicorn
+psycopg2-binary
+pandas
+uuid
+statistics
